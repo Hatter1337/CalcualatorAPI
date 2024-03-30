@@ -3,7 +3,12 @@
 ## Overview
 
 This project implements a web-based calculator application that performs basic arithmetic operations:
-(+) addition, (-) subtraction, (*) multiplication, and (/) division. The architecture separates the business logic from the presentation layer and ensures that the system is extendable for future enhancements.
+- (+) addition, 
+- (-) subtraction, 
+- (*) multiplication, 
+- (/) division. 
+
+The architecture separates the business logic from the presentation layer and ensures that the system is extendable for future enhancements.
 
 The application adheres to OOP principles and is designed with future extensions in mind.
 
