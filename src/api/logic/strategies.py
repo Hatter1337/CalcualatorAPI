@@ -87,7 +87,7 @@ class DivisionStrategy(CalculationStrategy):
         """Performs division of two operands.
 
         Raises:
-            ValueError: If the second operand is zero.
+            ZeroDivisionError: If the second operand is zero.
         """
         if operand2 == 0:
             raise ZeroDivisionError("Division by zero is not allowed.")

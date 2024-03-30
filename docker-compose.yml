@@ -1,5 +1,12 @@
 version: "3.8"
 services:
+  backend-test:
+    build:
+      context: ./src/api
+    command: sh -c "PYTHONPATH=/app pytest"
+    volumes:
+      - .:/app
+
   backend:
     build:
       context: ./src/api

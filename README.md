@@ -1,4 +1,7 @@
 # Calculator API
+![Python 3.11](https://img.shields.io/badge/python-3.11-3776AB.svg?style=flat&logo=python&logoColor=yellow)
+![Next.js](https://img.shields.io/badge/next.js-14.1.4-FFFFFF.svg?style=flat&logo=next.js&logoColor=black)
+
 
 ## Overview
 
@@ -36,3 +39,7 @@ What things you need to install the software:
 
 #### The REST API is accessible at http://127.0.0.1:8000.
 Swagger: http://127.0.0.1:8000/docs.
+
+### Running the unit-tests
+Tests written with [pytest](https://docs.pytest.org/en/8.0.x/) can be run in Docker by executing the command:
+`$ docker-compose up --build backend-test`.
