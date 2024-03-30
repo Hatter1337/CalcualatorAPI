@@ -1,5 +1,6 @@
 import logging
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from logic.expression_evaluator import ExpressionEvaluator
@@ -10,13 +11,25 @@ logger = logging.getLogger("uvicorn")
 expression_evaluator = ExpressionEvaluator()
 
 
+# Set up CORS middleware
+app.add_middleware(
+    CORSMiddleware,  # noqa
+    allow_origins=[
+        "http://localhost",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 class CalculatorInput(BaseModel):
     """Input for expression calculation."""
 
     expression: str
 
 
-@app.post("/calculate")
+@app.post("/v1/calculate")
 def calculate_expression(c_input: CalculatorInput):
     """Calculates result of an expression."""
     try:
